@@ -1,0 +1,13 @@
+(responsive and animatable by design)
+(with custom width, color, border-radius, font, intelligent labels)
+bar charts (hor,ver)
+pie charts (pop-out)
+line chart (with smoothing option)
+bubble chart
+
+overlay charts of diff type
+3d transforms
+creation 2 ways - simple stylus file (for design) or js loading (for data)
+
+1. bar-ver
+    Labels, template out

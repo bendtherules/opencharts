@@ -1,0 +1,136 @@
+full=100%
+half=50%
+
+add_unitless()
+    sum=null
+    res_unit=unit(arguments)
+    for arg in arguments
+        arg=unit(arg,"")
+        if sum is null
+            sum=arg
+        else
+            sum=sum+arg
+    return unit(sum,res_unit)
+*
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+
+.chart
+    width 50vw
+    height 50vh
+    margin 25vh 25vw
+    background-color lightgreen
+    position relative
+
+.chart-container
+    width full
+    height full
+
+axis-thick=1em
+axis-line-thick=.25em
+.axis
+    width full
+    height full
+    position absolute
+    // z-index 4
+    
+    .axis-x
+    .axis-y
+        position absolute
+        background-color lightgray
+
+    .axis-y
+        width axis-thick
+        height full
+
+        .axis-line
+            left half
+
+            .axis-line-container
+                margin 0 -0.5*axis-line-thick
+                height full
+                width axis-line-thick
+
+
+    .axis-x
+        height axis-thick
+        width full
+        bottom 0
+
+        .axis-line
+            top 50%
+
+            .axis-line-container
+                margin -0.5*axis-line-thick 0
+                height axis-line-thick
+                width full
+
+.axis-line
+    width full
+    height full
+    position absolute
+    z-index 5
+.axis-line-container
+    background-color black
+
+.scene
+    position absolute
+    z-index 1
+    // background-color green
+    width full
+    height full
+    padding-left axis-thick
+    padding-bottom axis-thick
+
+    .scene-container
+        position relative
+        width full
+        height full
+        background-color lightblue
+        padding-top 0.02px
+
+count_bar=4
+p_empty=50%
+p_bar_m=p_empty/count_bar
+p_bar_w=(full - p_empty)/count_bar
+// p_bar=p_bar/count_bar
+.bar
+    height p_bar_w
+    width full
+    // margin (p_bar_m/2) 0
+    // background-color lightgreen
+    // float left
+    position absolute
+    
+    .bar-inner
+        // position absolute
+        // bottom 0
+        height full
+        background-color yellow
+
+//make this thing below possible
+for tmp_count in 1..count_bar
+    .bar.part-{tmp_count}
+        top add_unitless((p_bar_m / 2),(p_bar_m * (tmp_count - 1)),(p_bar_w * (tmp_count - 1)))
+        right p_bar_m p_bar_w tmp_count
+
+//automate this part     
+.part-1
+    .bar-inner
+        width 40%
+
+.part-2
+    .bar-inner
+        width 65%
+
+.part-3
+    .bar-inner
+        width 90%
+
+.part-4
+    .bar-inner
+        width 75%
+
+.clearfix
+    clear both

@@ -1,0 +1,80 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	position: relative;
+	margin: 0;
+}
+
+.wrapper{
+
+}
+
+.pie-part{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 200px;
+	top: 200px;
+	background-color: green;
+	border-top-right-radius: 50% 100%;
+	border-top-left-radius: 50% 100%;
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
+
+.part-1{
+	background-color: rgb(200,50,255);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	z-index: 1;
+}
+
+.part-2{
+	background-color: rgb(150,100,255);
+	-webkit-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	transform: rotate(120deg);
+	z-index: 2;
+}
+
+.part-3{
+	background-color: rgb(100,150,255);
+	-webkit-transform: rotate(150deg);
+	-moz-transform: rotate(150deg);
+	-ms-transform: rotate(150deg);
+	-o-transform: rotate(150deg);
+	transform: rotate(150deg);
+	z-index: 3;
+}
+
+.part-4{
+	background-color: rgb(50,200,255);
+	-webkit-transform: rotate(220deg);
+	-moz-transform: rotate(220deg);
+	-ms-transform: rotate(220deg);
+	-o-transform: rotate(220deg);
+	transform: rotate(220deg);
+	z-index: 4;
+	left: 0;
+	top:-100px;
+}
+
+.clipper{
+	overflow: hidden;
+	position: absolute;
+	left: 200px;
+	top: 300px;
+	width: 200px;
+	height: 100px;
+}

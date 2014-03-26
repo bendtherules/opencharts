@@ -1,0 +1,103 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.chart {
+  width: 50vw;
+  height: 50vh;
+  margin: 25vh 25vw;
+  background-color: #90ee90;
+  position: relative;
+}
+.chart-container {
+  width: 100%;
+  height: 100%;
+}
+.axis {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+}
+.axis .axis-x,
+.axis .axis-y {
+  position: absolute;
+  background-color: #d3d3d3;
+}
+.axis .axis-y {
+  width: 1em;
+  height: 100%;
+}
+.axis .axis-y .axis-line {
+  left: 50%;
+}
+.axis .axis-y .axis-line .axis-line-container {
+  margin: 0 -0.125em;
+  height: 100%;
+  width: 0.25em;
+}
+.axis .axis-x {
+  height: 1em;
+  width: 100%;
+  bottom: 0;
+}
+.axis .axis-x .axis-line {
+  top: 50%;
+}
+.axis .axis-x .axis-line .axis-line-container {
+  margin: -0.125em 0;
+  height: 0.25em;
+  width: 100%;
+}
+.axis-line {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+.axis-line-container {
+  background-color: #000;
+}
+.scene {
+  position: absolute;
+  z-index: 1;
+  background-color: #008000;
+  width: 100%;
+  height: 100%;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+.scene .scene-container {
+  width: 100%;
+  height: 100%;
+  background-color: #add8e6;
+}
+.bar {
+  width: 12.5%;
+  height: 100%;
+  margin: 0 6.25%;
+  float: left;
+  position: relative;
+}
+.bar .bar-inner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ff0;
+}
+.part-1 .bar-inner {
+  height: 40%;
+}
+.part-2 .bar-inner {
+  height: 65%;
+}
+.part-3 .bar-inner {
+  height: 90%;
+}
+.part-4 .bar-inner {
+  height: 75%;
+}
+.clearfix {
+  clear: both;
+}
