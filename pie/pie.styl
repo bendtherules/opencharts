@@ -1,0 +1,87 @@
+full=100%
+half=50%
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    text-align center
+}
+
+.pie-chart{
+    position absolute
+    width 50vh
+    height 50vh
+    left 25vh
+    top 25vh
+}
+
+.wrapper
+    position relative
+    width full
+    height full
+
+.pie-part
+    width full
+    height half
+    position absolute
+
+.pie-part
+    .part-inner
+        position: absolute;
+        width: full
+        height: full
+        left: 0
+        top: 0
+        background-color: green;
+        border-top-right-radius: 50% 100%;
+        border-top-left-radius: 50% 100%;
+        -webkit-transform-origin: 50% 100%;
+        -moz-transform-origin: 50% 100%;
+        -ms-transform-origin: 50% 100%;
+        -o-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+
+clipper{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+}
+clipper-inner
+    left 0
+    top -100%
+
+transform()
+    -webkit-transform arguments
+    -moz-transform arguments
+    -ms-transform arguments
+    -o-transform arguments
+    transform arguments
+
+angles=(0 120 150 220)
+angles_sum=null
+colors= rgb(200, 50, 255) rgb(150, 100, 255) rgb(100, 150, 255) rgb(50, 200, 255)
+
+for count in 1..4
+    col=colors[(count - 1)]
+    angle=angles[(count - 1)]
+    if angles_sum is not defined
+        angles_sum=angle
+    else
+        angles_sum+=angle
+    .part-{count} 
+        .part-inner
+            background-color col
+            transform rotate(angle deg)
+            z-index count
+
+    if angles_sum>180
+        .part-{count}
+            @extend clipper
+            .part-inner
+                @extend clipper-inner
