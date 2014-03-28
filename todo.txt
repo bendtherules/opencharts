@@ -1,3 +1,5 @@
+** use jade for html templating **
+
 (responsive and animatable by design)
 (with custom width, color, border-radius, font, intelligent labels)
 bar charts (hor,ver)
