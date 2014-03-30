@@ -1,3 +1,0 @@
-Needs proper unit detection
-% coverter -> Makes x% to (100-x)%
-think about how to know if document is loaded or defer it to onloaded

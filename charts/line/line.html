@@ -1,0 +1,33 @@
+
+<div class="chart">
+    <div class="chart-container">
+        <div class="axis">
+            <div class="axis-y">
+                <div class="axis-line">
+                    <div class="axis-line-container"></div>
+                </div>
+            </div>
+            <div class="axis-x">
+                <div class="axis-line">
+                    <div class="axis-line-container"></div>
+                </div>
+            </div>
+        </div>
+        /*{{ if (it.points.length){ }}*/
+        <div class="scene">
+            <div class="scene-container">
+                /*{{ for (count=0;count<it.points.length;count++){ }}*/
+                <div class="line-part part-{{= count+1 }}">
+                    <div class="non-area">
+                        /*{{ if (count+1<it.points.length){ }}*/
+                        <div class="line-inner"></div>
+                        /*{{ }; }}
+                        <div class="point-inner"></div>
+                    </div>
+                </div>
+                /*{{ }; }}*/
+        /*{{ }; }}*/
+            </div>
+        </div>
+    </div>
+</div>

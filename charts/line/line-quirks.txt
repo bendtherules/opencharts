@@ -1,0 +1,18 @@
+Needs proper unit detection
+% coverter -> Makes x% to (100-x)%
+think about how to know if document is loaded or defer it to onloaded
+
+If responsive, how to get angle?
+Take care of last dot
+
+think why margin-left is not needed
+think about making two css (with script) and passing div as input
+** make .styl conformant with new html structure **
+
+To make containing area graph
+------------------------------
+make area below- outer bigger rect as width-height with overflow:none, inner -> rotated (diff height) rect + inner smaller rect
+ _
+/_| -> inner rotated diff height
+|_| -> inner smaller
+ total containing rect -> outer bigger rect
